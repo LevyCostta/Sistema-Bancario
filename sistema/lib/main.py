@@ -3,6 +3,7 @@ from pessoa import *
 from banco import *
 from agencia import *
 from conta import *
+from areacliente import *
 
 def main_menu():
     while True:
@@ -11,7 +12,7 @@ def main_menu():
         if resposta == 1:
             main()
         elif resposta == 2:
-            break
+            menu_areacliente()
         else:
             print('ERRO - Digite uma opção válida!')
             sleep(2)

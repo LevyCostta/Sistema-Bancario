@@ -31,6 +31,3 @@ def menu_areacliente():
         elif resposta == 2:
             print("Saindo...")
             break
-
-
-menu_areacliente()
