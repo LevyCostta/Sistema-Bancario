@@ -1,0 +1,18 @@
+[
+    {
+        "Titular": "Levi",
+        "CPF": "09772859521",
+        "N\u00famero": 456,
+        "Ag\u00eancia": "1234",
+        "Banco": "Itau",
+        "Saldo": 0
+    },
+    {
+        "Titular": "Joao",
+        "CPF": "12345678998",
+        "N\u00famero": 789,
+        "Ag\u00eancia": "1235",
+        "Banco": "Santander",
+        "Saldo": 0
+    }
+]

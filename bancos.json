@@ -1,0 +1,21 @@
+[
+    {
+        "nome": "Itau",
+        "agencias": [
+            {
+                "numero": "1234"
+            },
+            {
+                "numero": "3216"
+            }
+        ]
+    },
+    {
+        "nome": "Santander",
+        "agencias": [
+            {
+                "numero": "1235"
+            }
+        ]
+    }
+]
