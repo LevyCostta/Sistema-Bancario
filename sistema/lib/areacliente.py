@@ -54,12 +54,44 @@ def sacar(contas, nome_cliente):
                 return
     print('Conta ou Agência não encontrada, ou não pertence ao cliente.')
 
+def transferir(contas, nome_cliente):
+    numero_agencia_remetente = input('Digite o número da agência do remetente: ')
+    numero_conta_remetente = int(input('Digite o número da conta do remetente: '))
+    print('\nAgora vamos precisar dos dados da conta do destinatário:')
+    sleep(2)
+    
+    numero_agencia_destinatario = input('\nDigite o número da agência do destinatário: ')
+    numero_conta_destinatario = int(input('Digite o número da conta do destinatário: '))
+    valor_transferencia = float(input('Digite o valor que deseja transferir: '))
+    
+    conta_remetente = None
+    conta_destinatario = None
+
+    for conta in contas:
+        if conta['Titular'] == nome_cliente and conta['Número'] == numero_conta_remetente and conta['Agência'] == numero_agencia_remetente:
+            conta_remetente = conta
+        if conta['Número'] == numero_conta_destinatario and conta['Agência'] == numero_agencia_destinatario:
+            conta_destinatario = conta
+
+    if conta_remetente and conta_destinatario:
+        if conta_remetente['Saldo'] >= valor_transferencia:
+            conta_remetente['Saldo'] -= valor_transferencia
+            conta_destinatario['Saldo'] += valor_transferencia
+            salvar_dadoscontas(contas)
+            print(f'Transferência de R${valor_transferencia} realizada com sucesso!')
+            print(f'Novo saldo em conta: R${conta_remetente["Saldo"]}.')
+            
+        else:
+            print('Saldo insuficiente para realizar a transferência.')
+    else:
+        print('Conta do remetente ou destinatário não encontrada.')
+
 def menu_areacliente():
     contas = carregar_dadoscontas()
     nome_cliente = input('Digite o nome do cliente para iniciar: ').title()
     while True:
         cabecalho('ACESSO DO CLIENTE'.center(50))
-        resposta = menu(['Listar Minhas Contas Bancárias', 'Depositar', 'Sacar', 'Sair'])
+        resposta = menu(['Listar Minhas Contas Bancárias', 'Depositar', 'Sacar', 'Efetuar Transferência', 'Sair'])
         if resposta == 1:
             listar_contas_cliente(contas, nome_cliente)
         elif resposta == 2:
@@ -67,4 +99,6 @@ def menu_areacliente():
         elif resposta == 3:
             sacar(contas, nome_cliente)
         elif resposta ==4:
+            transferir(contas, nome_cliente)
+        elif resposta ==5:
             break
