@@ -13,6 +13,10 @@ def main_menu():
             main()
         elif resposta == 2:
             menu_areacliente()
+        elif resposta == 3:
+            print('Saindo do sistema...')
+            sleep(2)
+            break
         else:
             print('ERRO - Digite uma opção válida!')
             sleep(2)

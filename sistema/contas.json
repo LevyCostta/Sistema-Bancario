@@ -5,7 +5,7 @@
         "N\u00famero": 456,
         "Ag\u00eancia": "1234",
         "Banco": "Itau",
-        "Saldo": 0
+        "Saldo": 150.37
     },
     {
         "Titular": "Joao",
@@ -13,7 +13,7 @@
         "N\u00famero": 789,
         "Ag\u00eancia": "1235",
         "Banco": "Santander",
-        "Saldo": 0
+        "Saldo": 137.21
     },
     {
         "Titular": "Levi",
