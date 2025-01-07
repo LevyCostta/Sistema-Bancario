@@ -91,7 +91,7 @@ def menu_areacliente():
     nome_cliente = input('Digite o nome do cliente para iniciar: ').title()
     while True:
         cabecalho('ACESSO DO CLIENTE'.center(50))
-        resposta = menu(['Listar Minhas Contas Bancárias', 'Depositar', 'Sacar', 'Efetuar Transferência', 'Sair'])
+        resposta = menu(['Listar Minhas Contas Bancárias', 'Depositar', 'Sacar', 'Efetuar Transferência', 'Voltar ao Menu Anterior'])
         if resposta == 1:
             listar_contas_cliente(contas, nome_cliente)
         elif resposta == 2:
@@ -102,3 +102,6 @@ def menu_areacliente():
             transferir(contas, nome_cliente)
         elif resposta ==5:
             break
+        else:
+            print('ERRO - Digite uma opção válida!')
+            sleep(2)
