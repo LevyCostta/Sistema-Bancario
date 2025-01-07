@@ -5,7 +5,7 @@ from utilidades import *
 from banco import *
 
 # Nome do arquivo onde os dados serão salvos
-ARQUIVO_BANCOS = 'bancos.json'
+ARQUIVO_BANCOS = 'Sistema-Bancario/sistema/bancos.json'
 
 class Agencia:
     def __init__(self, numero):

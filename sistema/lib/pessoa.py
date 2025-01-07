@@ -4,7 +4,7 @@ import os
 from utilidades import *
 
 # Nome do arquivo onde os dados serão salvos
-ARQUIVO_PESSOAS = 'pessoas.json'
+ARQUIVO_PESSOAS = 'Sistema-Bancario/sistema/pessoas.json'
 
 class Pessoa:
     def __init__(self, nome, idade, cpf):

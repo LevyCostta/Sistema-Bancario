@@ -2,7 +2,7 @@ from time import sleep
 import json
 import os
 from utilidades import *
-from agencia import Agencia
+from agencia import *
 
 class Banco:
     def __init__(self, nome):
@@ -13,7 +13,7 @@ class Banco:
         self.agencias.append(agencia)
 
 # Nome do arquivo onde os dados serão salvos
-ARQUIVO_BANCOS = 'bancos.json'
+ARQUIVO_BANCOS = 'Sistema-Bancario/sistema/bancos.json'
 
 # Função para carregar os dados do arquivo JSON
 def carregar_dadosbanco():

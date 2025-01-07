@@ -1,6 +1,6 @@
 from conta import *
 
-ARQUIVO_CONTAS = 'contas.json'
+ARQUIVO_CONTAS = 'Sistema-Bancario/sistema/contas.json'
 
 class Cliente:
     def __init__(self, nome, cpf):

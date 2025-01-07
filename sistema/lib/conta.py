@@ -7,7 +7,7 @@ from pessoa import *
 from banco import *
 from agencia import *
 
-ARQUIVO_CONTAS = 'contas.json'
+ARQUIVO_CONTAS = 'Sistema-Bancario/sistema/contas.json'
 
 def carregar_dadoscontas():
     if os.path.exists(ARQUIVO_CONTAS):
