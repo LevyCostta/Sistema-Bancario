@@ -1,26 +1,37 @@
 [
-  {
-    "Titular": "Levi",
-    "CPF": "0000000000",
-    "N\u00famero": 456,
-    "Ag\u00eancia": "1234",
-    "Banco": "Itau",
-    "Saldo": 130.37
-  },
-  {
-    "Titular": "Joao",
-    "CPF": "12345678998",
-    "N\u00famero": 789,
-    "Ag\u00eancia": "1235",
-    "Banco": "Santander",
-    "Saldo": 137.21
-  },
-  {
-    "Titular": "Levi",
-    "CPF": "00000000000",
-    "N\u00famero": 1234,
-    "Ag\u00eancia": "1235",
-    "Banco": "Santander",
-    "Saldo": 0.0
-  }
+    {
+        "Titular": "Levi",
+        "CPF": "00000000000",
+        "N\u00famero": 1234,
+        "Ag\u00eancia": "3216",
+        "Banco": "Itau",
+        "Saldo": 164.8,
+        "extrato": [
+            {
+                "data": "08/01/2025 08:10:08",
+                "tipo": "Dep\u00f3sito",
+                "valor": 200.0
+            },
+            {
+                "data": "08/01/2025 08:13:28",
+                "tipo": "Transfer\u00eancia Enviada",
+                "valor": 35.2
+            }
+        ]
+    },
+    {
+        "Titular": "Joao",
+        "CPF": "12345678998",
+        "N\u00famero": 123456,
+        "Ag\u00eancia": "1235",
+        "Banco": "Santander",
+        "Saldo": 35.2,
+        "extrato": [
+            {
+                "data": "08/01/2025 08:13:28",
+                "tipo": "Transfer\u00eancia Recebida",
+                "valor": 35.2
+            }
+        ]
+    }
 ]

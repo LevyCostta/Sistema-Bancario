@@ -6,13 +6,19 @@ from utilidades import *
 from pessoa import *
 from banco import *
 from agencia import *
+from datetime import datetime
 
 ARQUIVO_CONTAS = 'Sistema-Bancario/sistema/contas.json'
 
 def carregar_dadoscontas():
     if os.path.exists(ARQUIVO_CONTAS):
         with open(ARQUIVO_CONTAS, 'r') as arquivo:
-            return json.load(arquivo)
+            contas = json.load(arquivo)
+            # Garantir que cada conta tenha um extrato
+            for conta in contas:
+                if 'extrato' not in conta:
+                    conta['extrato'] = []  # Inicializa o extrato como uma lista vazia
+            return contas
     return []
 
 def salvar_dadoscontas(contas):
@@ -33,6 +39,7 @@ class Conta:
         self.agencia = agencia
         self.banco = banco
         self.saldo = saldo
+        self.extrato = []
 
 # FUNÇÃO PARA CADASTRAR NOVOS CLIENTES (JÁ CADASTRADOS NA CLASSE PESSOA)
 def cadastrar_conta(contas):
